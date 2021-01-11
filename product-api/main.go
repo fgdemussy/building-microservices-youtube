@@ -10,9 +10,9 @@ import (
 
 	"github.com/go-openapi/runtime/middleware"
 
+	"github.com/fgdemussy/building-microservices-youtube/product-api/data"
+	"github.com/fgdemussy/building-microservices-youtube/product-api/handlers"
 	"github.com/gorilla/mux"
-	"github.com/nicholasjackson/building-microservices-youtube/product-api/data"
-	"github.com/nicholasjackson/building-microservices-youtube/product-api/handlers"
 	"github.com/nicholasjackson/env"
 )
 
