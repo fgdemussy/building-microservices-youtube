@@ -12,7 +12,7 @@ import (
 
 	"github.com/fgdemussy/building-microservices-youtube/product-api/data"
 	"github.com/fgdemussy/building-microservices-youtube/product-api/handlers"
-	gorillaHandlers "github.com/gorilla/handlers"
+	gohandlers "github.com/gorilla/handlers"
 	"github.com/gorilla/mux"
 	"github.com/nicholasjackson/env"
 )
@@ -56,7 +56,7 @@ func main() {
 	getR.Handle("/swagger.yaml", http.FileServer(http.Dir("./")))
 
 	// CORS
-	ch := gorillaHandlers.CORS(gorillaHandlers.AllowedOrigins([]string{"http://localhost:3000"}))
+	ch := gohandlers.CORS(gohandlers.AllowedOrigins([]string{"http://localhost:3000"}))
 
 	// create a new server
 	s := http.Server{
